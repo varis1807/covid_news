@@ -148,7 +148,7 @@ function main(req, res) {
       await page.screenshot({ path: "output6.png" });
       console.log(data6);
 
-      // All about covid
+      // All about covid-19
       await page.goto(
         "https://www.healthline.com/health/coronavirus-covid-19#symptoms",
         { waitUntil: "load", timeout: 0 }
@@ -172,7 +172,7 @@ function main(req, res) {
           ".article-body.css-d2znx6.undefined"
         );
         return {
-          covidCases: Array.from(headlineNodes).map((a) => a.textContent),
+          AllAboutCovid_19: Array.from(headlineNodes).map((a) => a.textContent),
         };
       });
       await page.screenshot({ path: "output7.png" });
